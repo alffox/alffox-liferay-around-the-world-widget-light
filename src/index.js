@@ -313,11 +313,12 @@ class App extends React.Component {
     const randomPicturesPageNumber = Math.floor(Math.random() * 20); //helps to display mostly new pictures upon refreshing the page
 
     const picturesDataURL =
-      RESTAPIServer +
-      "/picturesEndpoint?page=" +
+      "https://api.unsplash.com/search/photos?page=" +
       randomPicturesPageNumber +
       "&query=" +
-      currentCountry;
+      currentCountry +
+      "&client_id=" +
+      this.props.configuration.portletInstance.unsplash_apikey
 
     this.setState({ isPicturesLoading: true }, () => {
       axios
@@ -393,6 +394,15 @@ class App extends React.Component {
   }
 }
 
-export default function main({ portletElementId }) {
-  ReactDOM.render(<App />, document.getElementById(portletElementId));
+export default function main({ portletNamespace, contextPath, portletElementId, configuration }) {
+  ReactDOM.render(
+    <App
+      portletNamespace={portletNamespace}
+      contextPath={contextPath}
+      portletElementId={portletElementId}
+
+      configuration={configuration}
+    />,
+    document.getElementById(portletElementId)
+  );
 }
