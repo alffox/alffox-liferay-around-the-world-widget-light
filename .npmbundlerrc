@@ -11,7 +11,7 @@
 		"output-dir": "dist",
 		"features": {
 			"js-extender": true,
-			"web-context": "/liferay-around-the-world",
+			"web-context": "/liferay-around-the-world-light",
 			"configuration": "features/configuration.json"
 		}
 	},
