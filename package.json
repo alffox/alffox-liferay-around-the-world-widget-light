@@ -1,7 +1,7 @@
 {
-	"name": "liferay-around-the-world",
-	"version": "2.0.2",
-	"description": "Liferay Around The World",
+	"name": "liferay-around-the-world-light",
+	"version": "1.0.0",
+	"description": "Liferay Around The World light",
 	"devDependencies": {
 		"liferay-npm-bundler": "^2.16.0",
 		"liferay-npm-build-support": "^2.16.0",
