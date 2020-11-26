@@ -1,34 +1,36 @@
 {
 	"$schema": "https://raw.githubusercontent.com/liferay/liferay-js-toolkit/master/resources/schemas/configuration.schema.json",
-	"system": {
-		"category": "liferay-around-the-world",
-		"name": "Liferay Around The World",
-		"fields": {
-			"fruit": {
-				"type": "string",
-				"name": "Favorite fruit",
-				"description": "Choose the fruit you like the most",
-				"default": "orange",
-				"options": {
-					"orange": "An orange",
-					"pear": "A pear",
-					"apple": "An apple"
-				}
-			}
-		}
-	},
 	"portletInstance": {
 		"fields": {
-			"drink": {
+			"time_date_apikey": {
 				"type": "string",
-				"name": "Favorite drink",
-				"description": "Choose the drink you like the most",
-				"default": "water",
-				"options": {
-					"water": "Water",
-					"wine": "Wine",
-					"beer": "Beer"
-				}
+				"name": "Time and Date API Key",
+				"description": "Enter the Time and Date API key",
+				"default": ""
+			},
+			"unsplash_apikey": {
+				"type": "string",
+				"name": "Unsplash API Key",
+				"description": "Enter the Unsplash API key",
+				"default": ""
+			},
+			"weather_apikey": {
+				"type": "string",
+				"name": "Weather API Key",
+				"description": "Enter the Weather API key",
+				"default": ""
+			},
+			"webcams_apikey": {
+				"type": "string",
+				"name": "Webcams API Key",
+				"description": "Enter the Webcams API key",
+				"default": ""
+			},
+			"googlemaps_apikey": {
+				"type": "string",
+				"name": "Google Maps API Key",
+				"description": "Enter the Google Maps API key",
+				"default": ""
 			}
 		}
 	}
