@@ -190,8 +190,9 @@ class App extends React.Component {
 
   fetchTime(currentTimeZoneDBName) {
     const URL =
-      "https://api.timezonedb.com/v2.1/get-time-zone?format=json&by=zone&zone=" +
-      currentTimeZoneDBName + "&key=" + this.props.configuration.portletInstance.time_date_apikey;
+      "https://api.timezonedb.com/v2.1/get-time-zone" +
+      "?format=json&by=zone&zone=" + currentTimeZoneDBName +
+      "&key=" + this.props.configuration.portletInstance.time_date_apikey;
 
     this.setState({ isTimeDateLoading: true }, () => {
       axios
@@ -215,11 +216,11 @@ class App extends React.Component {
 
   fetchWeather(currentCountry, currentLatitude, currentLongitude) {
     const weatherURL =
-      "https://api.openweathermap.org/data/2.5/weather?lat=" +
-      currentLatitude +
-      "&lon=" +
-      currentLongitude +
-      "&units=metric" + "&appid=" + this.props.configuration.portletInstance.weather_apikey;
+      "https://api.openweathermap.org/data/2.5/weather" +
+      "?lat=" + currentLatitude +
+      "&lon=" + currentLongitude +
+      "&units=metric" +
+      "&appid=" + this.props.configuration.portletInstance.weather_apikey;
 
     this.setState({ isWeatherLoading: true }, () => {
       axios
@@ -312,10 +313,8 @@ class App extends React.Component {
     const picturesDataURL =
       "https://api.unsplash.com/search/photos?page=" +
       randomPicturesPageNumber +
-      "&query=" +
-      currentCountry +
-      "&client_id=" +
-      this.props.configuration.portletInstance.unsplash_apikey
+      "&query=" + currentCountry +
+      "&client_id=" + this.props.configuration.portletInstance.unsplash_apikey
 
     this.setState({ isPicturesLoading: true }, () => {
       axios
