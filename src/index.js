@@ -190,9 +190,8 @@ class App extends React.Component {
 
   fetchTime(currentTimeZoneDBName) {
     const URL =
-      RESTAPIServer +
-      "/TimeDateEndpoint?format=json&by=zone&zone=" +
-      currentTimeZoneDBName;
+      "https://api.timezonedb.com/v2.1/get-time-zone?format=json&by=zone&zone=" +
+      currentTimeZoneDBName + "&key=" + this.props.configuration.portletInstance.time_date_apikey;
 
     this.setState({ isTimeDateLoading: true }, () => {
       axios
