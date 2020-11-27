@@ -392,7 +392,6 @@ export default function main({ portletNamespace, contextPath, portletElementId, 
       portletNamespace={portletNamespace}
       contextPath={contextPath}
       portletElementId={portletElementId}
-
       configuration={configuration}
     />,
     document.getElementById(portletElementId)
