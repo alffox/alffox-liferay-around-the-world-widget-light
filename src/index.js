@@ -21,8 +21,6 @@ import AtwFooter from "./modules/AtwFooter.es";
  * @return {void}
  */
 
-const RESTAPIServer = "dummy";
-
 class App extends React.Component {
   constructor() {
     super();
