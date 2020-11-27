@@ -87,8 +87,6 @@ class App extends React.Component {
       locationsData.locations[lastLocationIndex].location.lon
     );
     this.fetchWebCamData(
-      locationsData.locations[lastLocationIndex].location.lat,
-      locationsData.locations[lastLocationIndex].location.lon,
       locationsData.locations[lastLocationIndex].ISO_3166_1_alpha_2
     );
     this.fetchWikiData(
@@ -125,11 +123,7 @@ class App extends React.Component {
       currentLongitude
     );
     this.fetchMapCoordinates(currentLatitude, currentLongitude);
-    this.fetchWebCamData(
-      currentLatitude,
-      currentLongitude,
-      currentLocationISO_3166_1_alpha_2
-    );
+    this.fetchWebCamData(currentLocationISO_3166_1_alpha_2);
     this.fetchWikiData(currentWikiDescription, currentWikiURL);
     this.fetchPictures(currentCountry);
   }
@@ -273,23 +267,27 @@ class App extends React.Component {
     });
   }
 
-  fetchWebCamData(
-    currentLatitude,
-    currentLongitude,
-    currentLocationISO_3166_1_alpha_2
-  ) {
-    const webCamDataURL =
-      RESTAPIServer +
-      "/webcamEndpoint?countryCode=" +
-      currentLocationISO_3166_1_alpha_2.toUpperCase() +
-      "&lat=" +
-      currentLatitude +
-      "&lon=" +
-      currentLongitude;
+  fetchWebCamData(currentLocationISO_3166_1_alpha_2) {
+
+    const webCamDataURL = "https://webcamstravel.p.rapidapi.com/webcams/list/country=" +
+      currentLocationISO_3166_1_alpha_2.toUpperCase();
+
+    const options = {
+      method: 'GET',
+      url: webCamDataURL,
+      params: {
+        lang: 'en',
+        orderby: 'random',
+        show: 'webcams:image,location'
+      },
+      headers: {
+        'x-rapidapi-key': this.props.configuration.portletInstance.webcams_apikey,
+        'x-rapidapi-host': 'webcamstravel.p.rapidapi.com'
+      }
+    };
 
     this.setState({ isWebCamLoading: true }, () => {
-      axios
-        .get(webCamDataURL)
+      axios.request(options)
         .then(response => response.data)
         .then(data => {
           this.setState({
