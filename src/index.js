@@ -215,12 +215,11 @@ class App extends React.Component {
 
   fetchWeather(currentCountry, currentLatitude, currentLongitude) {
     const weatherURL =
-      RESTAPIServer +
-      "/weatherEndpoint?lat=" +
+      "https://api.openweathermap.org/data/2.5/weather?lat=" +
       currentLatitude +
       "&lon=" +
       currentLongitude +
-      "&units=metric";
+      "&units=metric" + "&appid=" + this.props.configuration.portletInstance.weather_apikey;
 
     this.setState({ isWeatherLoading: true }, () => {
       axios
@@ -247,12 +246,11 @@ class App extends React.Component {
 
   fetchWeatherForecast(currentCountry, currentLatitude, currentLongitude) {
     const weatherForecastURL =
-      RESTAPIServer +
-      "/forecastEndpoint?lat=" +
-      currentLatitude +
-      "&lon=" +
-      currentLongitude +
-      "&units=metric";
+      "https://api.openweathermap.org/data/2.5/forecast" +
+      "?lat=" + currentLatitude +
+      "&lon=" + currentLongitude +
+      "&units=metric" +
+      "&appid=" + this.props.configuration.portletInstance.weather_apikey;
 
     axios
       .get(weatherForecastURL)
