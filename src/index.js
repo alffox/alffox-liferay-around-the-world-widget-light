@@ -376,6 +376,7 @@ class App extends React.Component {
           currentWikiDescription={this.state.currentWikiDescription}
           currentWikiURL={this.state.currentWikiURL}
           picturesData={this.state.picturesData}
+          googleMapsKey={this.props.configuration.portletInstance.googlemaps_apikey}
         />
         <AtwFooter
           toggleDarkMode={this.toggleDarkMode}

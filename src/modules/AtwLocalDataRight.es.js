@@ -34,6 +34,7 @@ class AtwLocalDataRight extends React.Component {
         <MapContainer
           currentLatitude={this.props.currentLatitude}
           currentLongitude={this.props.currentLongitude}
+          googleMapsKey={this.props.googleMapsKey}
         />
         <AtwWebCamCard
           toggleDarkMode={this.props.toggleDarkMode}
