@@ -1,7 +1,7 @@
 {
-	"name": "liferay-around-the-world-light",
+	"name": "liferay-around-the-world-lite",
 	"version": "1.0.0",
-	"description": "Liferay Around The World light",
+	"description": "Liferay Around The World lite",
 	"devDependencies": {
 		"liferay-npm-bundler": "^2.16.0",
 		"liferay-npm-build-support": "^2.16.0",
@@ -40,7 +40,7 @@
 		"com.liferay.portlet.display-category": "Grow Community",
 		"com.liferay.portlet.header-portlet-css": "/css/custom.css",
 		"com.liferay.portlet.instanceable": false,
-		"javax.portlet.name": "liferayaroundtheworldlight",
+		"javax.portlet.name": "liferayaroundtheworldlite",
 		"javax.portlet.security-role-ref": "power-user,user",
 		"javax.portlet.display-name": "Liferay Around The World"
 	},
