@@ -1,10 +1,10 @@
-# Liferay Around the World React widget
+# Liferay Around the World React lite
 
 ![A paper airplane](https://github.com/alffox/liferay-around-the-world-widget/blob/master/assets/images/logo.svg)
 
-Liferay Around the World is a Liferay 7.2 DXP widget showing information for Liferay locations around the world: https://www.liferay.com/locations
+Liferay Around the World is a Liferay 7.1+ DXP widget showing information for Liferay locations around the world: https://www.liferay.com/locations
 
-All APIs have been used for demo, non-commercial purposes. You may read more here: https://github.com/alffox/liferay-around-the-world-widget#api--credit
+All APIs have been used for demo, non-commercial purposes. You may read more here: https://github.com/alffox/liferay-around-the-world-widget-lite#api--credit
 
 ## Purpose of this project
 
@@ -16,18 +16,20 @@ Where are my co-workers worldwide living? What's going on at their location righ
 
 ## How to run the app?
 
-1) Have a Liferay 7.2 DXP environment running
+0) Install the Generator Liferay JS as per https://github.com/liferay/liferay-js-toolkit/wiki/How-to-use-generator-liferay-js
+1) Have a Liferay DXP 7.1+ environment running
 2) Clone the repo locally on your machine and open a Terminal window in its root folder
-3) Verify that the Liferay home directory at https://github.com/alffox/liferay-around-the-world-widget/blob/master/.npmbuildrc#L2 is correctly set, if not, change it
+3) Verify that the Liferay home directory at https://github.com/alffox/liferay-around-the-world-widget-lite/blob/master/.npmbuildrc#L2 is correctly set, if not, change it
 4) Run `npm install` to install the dependencies
-5) Go to https://github.com/alffox/liferay-around-the-world-widget/blob/master/src/modules/MapContainer.es.js#L31 and replace `redacted` with a valid Google Maps API Key. The key should have a Maps JavaScript API and should be allowed to run on the Liferay URL where you will place the widget 
-6) Run `npm run deploy` to build and deploy the widget
-7) Wait for the Liferay logs to print:
+5) Run `npm run deploy` to build and deploy the widget
+6) Wait for the Liferay logs to print an information similar to the one below:
 
 ```
-08:36:33.930 INFO  [Refresh Thread: Equinox Container: 4f3c3f7c-5622-49c3-b4f1-24cbf1ca20e8][BundleStartStopLogger:39] STARTED liferay-around-the-world_1.0.0 [1101]
+08:36:33.930 INFO  INFO  [Refresh Thread: Equinox Container: 3289ac5a-00ae-4408-8b05-9859af796290][BundleStartStopLogger:46] STARTED liferay-around-the-world-lite_1.0.0 [1138]
 ```
-8) Sign in to Liferay, click on the top-right "+" icon > Add > Widgets > Grow Community > Liferay Around the World > add it to the page
+7) Sign in to Liferay, click on the top-right "+" icon > Add > Widgets > Grow Community > Liferay Around the World > add it to the page
+8) Go to the widget's ellipsis icon (the 3 vertical dots icon next to the title) > Configuration
+9) Enter the API keys for all services > Save > Close
 
 Official docs: https://github.com/liferay/liferay-js-toolkit/wiki/How-to-use-generator-liferay-js
 
@@ -35,24 +37,22 @@ Npm scripts guide: https://github.com/liferay/liferay-js-toolkit/wiki/Running-bu
 
 ## Information displayed
 
-The **Navigation bar** displays the currently selected location, the current date and time at that location and a search bar to find a location among the available ones
+The **Navigation bar** displays the currently selected location, the current date and time at that location and a search bar to find a location among the available ones.
 
-**Pictures** shows selected pictures for the selected country
+**Pictures** shows selected pictures for the selected country.
 
-**Official Grow page** has a hyperlink to the official Grow page for that location on the Liferay's internal Grow website
+**Official Grow page** has a hyperlink to the official Grow page for that location on the Liferay's internal Grow website.
 
-**Weather** displays the weather and temperature at the selected location and forecasts for the next 5 days. Buttons to switch between Celsius and Fahrenheit are also provided
+**Weather** displays the weather and temperature at the selected location and forecasts for the next 5 days.
 
-**Map** represents the currently selected location on Google Maps
+**Map** represents the currently selected location on Google Maps.
 
-**Nearby web cams** shows 10 web cams snapshots in a slider, taken at the current location and time
+**Nearby web cams** shows country web cams snapshots in a slider.
 
 ## Technical details
 
 This project was bootstrapped with the `generator-liferay-js` https://github.com/liferay/liferay-js-toolkit/wiki/How-to-use-generator-liferay-js, using the React Widget template.
 The app is optimized for being used on mobile devices through [Bootstrap CSS](https://getbootstrap.com/docs/4.1/getting-started/introduction/) and [Clay UI](https://clayui.com/)
-
-The backend runs through: https://github.com/alffox/around-the-world-backend/blob/master/index.js
 
 ### API / Credit
 
