@@ -18,7 +18,7 @@ Where are my co-workers worldwide living? What's going on at their location righ
 
 ### Deploy the compiled package
 1) Get the deployable package from https://github.com/alffox/liferay-around-the-world-widget-lite/releases
-2) While Liferay DXP is runnig, drop the package in the deploy folder
+2) While Liferay DXP is running, drop the package in the deploy folder
 3) Wait for the Liferay logs to print an information similar to the one below:
 
 ```
@@ -45,9 +45,8 @@ Where are my co-workers worldwide living? What's going on at their location righ
 9) Go to the widget's ellipsis icon (the 3 vertical dots icon next to the title) > Configuration
 10) Enter the API keys for all services > Save > Close
 
-Official docs: https://github.com/liferay/liferay-js-toolkit/wiki/How-to-use-generator-liferay-js
-
-Npm scripts guide: https://github.com/liferay/liferay-js-toolkit/wiki/Running-build-npm-scripts
+- Official docs: https://github.com/liferay/liferay-js-toolkit/wiki/How-to-use-generator-liferay-js
+- Npm scripts guide: https://github.com/liferay/liferay-js-toolkit/wiki/Running-build-npm-scripts
 
 ## Information displayed
 
