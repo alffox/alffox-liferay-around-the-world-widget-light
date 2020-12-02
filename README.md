@@ -17,7 +17,7 @@ Where are my co-workers worldwide living? What's going on at their location righ
 ## How to run the app?
 
 ### Deploy the compiled package
-1) Get the deployable package from https://github.com/alffox/liferay-around-the-world-widget-lite/releases
+1) Get the deployable .jar package from https://github.com/alffox/liferay-around-the-world-widget-lite/releases
 2) While Liferay DXP is running, drop the package in the deploy folder
 3) Wait for the Liferay logs to print an information similar to the one below:
 
