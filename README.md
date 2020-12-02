@@ -16,20 +16,34 @@ Where are my co-workers worldwide living? What's going on at their location righ
 
 ## How to run the app?
 
-0) Install the Generator Liferay JS as per https://github.com/liferay/liferay-js-toolkit/wiki/How-to-use-generator-liferay-js
-1) Have a Liferay DXP 7.1+ environment running
-2) Clone the repo locally on your machine and open a Terminal window in its root folder
-3) Verify that the Liferay home directory at https://github.com/alffox/liferay-around-the-world-widget-lite/blob/master/.npmbuildrc#L2 is correctly set, if not, change it
-4) Run `npm install` to install the dependencies
-5) Run `npm run deploy` to build and deploy the widget
-6) Wait for the Liferay logs to print an information similar to the one below:
+### Deploy the compiled package
+1) Get the deployable package from https://github.com/alffox/liferay-around-the-world-widget-lite/releases
+2) While Liferay DXP is runnig, drop the package in the deploy folder
+3) Wait for the Liferay logs to print an information similar to the one below:
 
 ```
 08:36:33.930 INFO  INFO  [Refresh Thread: Equinox Container: 3289ac5a-00ae-4408-8b05-9859af796290][BundleStartStopLogger:46] STARTED liferay-around-the-world-lite_1.0.0 [1138]
 ```
-7) Sign in to Liferay, click on the top-right "+" icon > Add > Widgets > Grow Community > Liferay Around the World > add it to the page
-8) Go to the widget's ellipsis icon (the 3 vertical dots icon next to the title) > Configuration
-9) Enter the API keys for all services > Save > Close
+4) Sign in to Liferay, click on the top-right "+" icon > Add > Widgets > Grow Community > Liferay Around the World > add it to the page
+5) Go to the widget's ellipsis icon (the 3 vertical dots icon next to the title) > Configuration
+6) Enter the API keys for all services > Save > Close
+
+### Compile the package
+1) Install the Generator Liferay JS as per https://github.com/liferay/liferay-js-toolkit/wiki/How-to-use-generator-liferay-js
+2) Have a Liferay DXP 7.1+ environment running
+3) Clone the repo locally on your machine and open a Terminal window in its root folder
+4) Verify that the Liferay home directory at https://github.com/alffox/liferay-around-the-world-widget-lite/blob/master/.npmbuildrc#L2 is correctly set, if not, change it
+5) Run `npm install` to install the dependencies
+6) Run `npm run deploy` to build and deploy the widget
+
+7) Wait for the Liferay logs to print an information similar to the one below:
+
+```
+08:36:33.930 INFO  INFO  [Refresh Thread: Equinox Container: 3289ac5a-00ae-4408-8b05-9859af796290][BundleStartStopLogger:46] STARTED liferay-around-the-world-lite_1.0.0 [1138]
+```
+8) Sign in to Liferay, click on the top-right "+" icon > Add > Widgets > Grow Community > Liferay Around the World > add it to the page
+9) Go to the widget's ellipsis icon (the 3 vertical dots icon next to the title) > Configuration
+10) Enter the API keys for all services > Save > Close
 
 Official docs: https://github.com/liferay/liferay-js-toolkit/wiki/How-to-use-generator-liferay-js
 
