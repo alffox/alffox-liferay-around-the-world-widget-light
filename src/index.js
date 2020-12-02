@@ -310,7 +310,7 @@ class App extends React.Component {
       "https://api.unsplash.com/search/photos?page=" +
       randomPicturesPageNumber +
       "&query=" + currentCountry +
-      "&client_id=" + this.props.configuration.portletInstance.unsplash_apikey
+      "&client_id=" + this.props.configuration.portletInstance.pictures_apikey
 
     this.setState({ isPicturesLoading: true }, () => {
       axios
@@ -376,7 +376,7 @@ class App extends React.Component {
           currentWikiDescription={this.state.currentWikiDescription}
           currentWikiURL={this.state.currentWikiURL}
           picturesData={this.state.picturesData}
-          googleMapsKey={this.props.configuration.portletInstance.googlemaps_apikey}
+          mapsKey={this.props.configuration.portletInstance.maps_apikey}
         />
         <AtwFooter
           toggleDarkMode={this.toggleDarkMode}

@@ -39,7 +39,7 @@ class AtwLocalData extends React.Component {
           currentLongitude={this.props.currentLongitude}
           webCamData={this.props.webCamData}
           currentCountry={this.props.currentCountry}
-          googleMapsKey={this.props.googleMapsKey}
+          mapsKey={this.props.mapsKey}
         />
       </div>
     );

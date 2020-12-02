@@ -4,32 +4,32 @@
 		"fields": {
 			"time_date_apikey": {
 				"type": "string",
-				"name": "Time and Date API Key",
-				"description": "Enter the Time and Date API key",
+				"name": "Time Zone Database API Key",
+				"description": "Enter the Time Zone Database API key. See https://timezonedb.com/ for more info",
 				"default": ""
 			},
-			"unsplash_apikey": {
+			"pictures_apikey": {
 				"type": "string",
 				"name": "Unsplash API Key",
-				"description": "Enter the Unsplash API key",
+				"description": "Enter the Unsplash API key. See https://unsplash.com/ for more info",
 				"default": ""
 			},
 			"weather_apikey": {
 				"type": "string",
-				"name": "Weather API Key",
-				"description": "Enter the Weather API key",
+				"name": "OpenWeather API Key",
+				"description": "Enter the OpenWeather API key. See https://openweathermap.org/ for more info",
 				"default": ""
 			},
 			"webcams_apikey": {
 				"type": "string",
-				"name": "Webcams API Key",
-				"description": "Enter the Webcams API key",
+				"name": "Windy Webcams API Key",
+				"description": "Enter the Windy Webcams API key. See https://www.windy.com/ for more info",
 				"default": ""
 			},
-			"googlemaps_apikey": {
+			"maps_apikey": {
 				"type": "string",
 				"name": "Google Maps API Key",
-				"description": "Enter the Google Maps API key",
+				"description": "Enter the Google Maps API key. See https://developers.google.com/maps/documentation/ for more info",
 				"default": ""
 			}
 		}
